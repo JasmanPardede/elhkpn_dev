@@ -1,0 +1,169 @@
+.main-header{
+	margin: 0;
+	background-color: #f6f6f6;
+	border: none;
+	border-bottom: 2px solid #e7e7e7;
+}
+
+.main-header .navbar-static-top,
+.main-header .navbar-custom-menu"{
+	background: none;
+}
+
+.skin-black-light .main-header>.logo{
+	background-color: #f6f6f6;
+	border: none;
+}
+
+.navbar-brand{
+	width: 231px;
+}
+
+.sidebar-toggle{
+	display: inline;
+}
+
+#menu-utama{
+	background-color: #f0f0f0;
+    font-size: 14px;
+     position: absolute;
+     z-index: 9999;
+     left: 0;
+    top: 0;
+}
+
+#menu-utama ul li:first-child{
+	border-left: 1px solid #e7e7e7;
+}
+
+#menu-utama ul li:last-child{
+	border-right: 1px solid #e7e7e7;
+}
+
+
+#menu-utama ul li a{
+	padding-top: 30px;
+	color: #777;
+}
+
+#navbar-last{
+	padding-right: 100px;
+}
+
+#navbar-last ul{
+	padding-left: 100px;
+}
+
+
+
+#menu-utama ul li a:active,
+#menu-utama ul li a:hover{
+	background: none;
+	color: #ce0009;
+}
+
+#navbar-last ul li a:hover,
+#navbar-last ul li a:active{
+	text-decoration: inherit;
+	background: none;
+}
+
+#navbar-last ul{
+	margin: 0;
+}
+
+#navbar-last img{
+	width: 70px;
+	border: 1px solid #e7e7e7;
+	position: absolute;
+ 	z-index: 9998;
+ 	right: 0;
+ 	top: 0;
+ 	margin-top: 7px;
+ 	margin-right: 8px;
+}
+
+.main-header .navbar{
+	border: none;
+}
+
+.skin-black-light .main-header>.navbar .navbar-custom-menu .navbar-nav>li>a, .skin-black-light .main-header>.navbar .navbar-right>li>a {
+    border: none;
+    border-right-width: 0;
+    height: 80px;
+}
+
+#navbar-last {
+  position: absolute;
+  z-index: 9998;
+  right: 0;
+  top: 0;
+}
+
+#navbar-last ul li ul{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+#navbar-last  #tanggal{
+	padding-top: 18px;
+	font-size: 14px;
+}
+
+#navbar-last  #output{
+   color: #ce0009;
+   font-size: 17px;
+   text-align: right;
+}
+
+.slimScrollDiv{
+	padding-top: 20px;
+}
+
+.content-header{
+	padding-top: 10px;
+}
+
+#time-bar{
+	margin-top: 50px;
+}
+
+.sidebar{
+	padding-bottom: 100px;
+}
+
+.sidebar .sidebar-menu .active .treeview-menu {
+    display: block;
+}
+
+.skin-black-light .sidebar-menu>li:hover>a, .skin-black-light .sidebar-menu>li.active>a {
+    background-color: #fff !important;
+	color: #333 !important;
+}
+
+#info-user{
+	padding-top: 5px;
+}
+
+#info-user a{
+	color: #ce0009;
+}
+
+#info-user a:hover,
+#info-user a:active{
+	padding: 0;
+	border-bottom: 1px solid #ce0009;
+}
+
+.navbar-nav .ajax-link,
+.navbar-nav .ajax-link:active,
+.navbar-nav .ajax-link:visited{
+	background-color: #F6F6F6 !important;
+}
+
+@media(min-width:768px) {
+	.sidebar-toggle{
+		display: none;
+	}
+}

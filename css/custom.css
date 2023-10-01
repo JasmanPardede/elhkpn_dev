@@ -1,0 +1,29 @@
+/* tracking lhkpn */
+
+.bx-bd{
+	border: 1.5px solid black;
+	width: 900px;
+	height: auto;
+	margin-left: 80px;
+}
+
+.cstm{
+	margin-top: 100px;
+	margin-right: 80px;
+
+}
+
+.tbl-bd{
+	margin-top: 130px;
+	margin-bottom: 30px;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.bkd-cntn{
+	margin-top: 40px;
+	float: right;
+	margin-right: 50px;
+	margin-bottom: -100px;
+}
+

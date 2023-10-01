@@ -1,0 +1,7 @@
+[ { "value": 1 , "text": "Admin Aplikasi"   , "continent": "Europe"    },
+  { "value": 1 , "text": "Admin KPK"        , "continent": "Europe"    },
+  { "value": 2 , "text": "Admin Instansi"   , "continent": "Europe"    },
+  { "value": 3 , "text": "User Instansi"    , "continent": "Europe"    },
+  { "value": 4 , "text": "PN/WL"            , "continent": "America"   },
+  { "value": 5 , "text": "Data Entry"       , "continent": "America"   }
+]

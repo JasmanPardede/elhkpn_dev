@@ -1,0 +1,38 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|asset|captcha|inc|pnwl_excel|download|images|brosur|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php#/$1 [L]
+
+
+#php_value max_execution_time 450
+#php_value max_input_time 200
+#php_value upload_max_filesize 128M
+
+AddType video/mp4 .mp4
+
+<IfModule mod_expires.c>
+ExpiresActive on 
+# Default directive
+ExpiresDefault "access plus 1 month"
+# CSS
+ExpiresByType text/css "access plus 1 month"
+# Images
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/jpg "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+# Javascript
+ExpiresByType application/javascript "access plus 1 month"
+# My favicon
+ExpiresByType image/x-icon "access plus 1 year"
+<FilesMatch "^(select2\.png)$">
+#  ExpiresActive on 
+  ExpiresDefault "access plus 1 years"
+</FilesMatch>
+</IfModule>
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|svg)$">
+Header set Cache-Control "max-age=604800, public, must-revalidate"
+</FilesMatch>
+#<Directory "/var/www/html/elhkpndev/portal/ikthisar/cetak/">
+##  Options FollowSymLinks
+#</Directory>

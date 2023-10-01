@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: <PROJECT_NAMESPACE>
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: torche-deployer-secret
+  namespace: <PROJECT_NAMESPACE>
+data:
+  .dockerconfigjson: ewogICJhdXRocyI6IHsKICAgICJyZWdpc3RyeS5kZXYudG9yY2hlLmlkIjogewogICAgICAiYXV0aCI6ICJkRzl5WTJobEsyUmxjR3h2ZVdWeU9rTTRNMEZEU1UxR1RWZzJORVZTVGpGS1ExVXlSVWxQV2xCVk4xbEdXalpIU1VoUVIxWXdORUpRVFVsR1RGRXdRazB6UmtwSVFUbGFSRkZaTlZkQlRWVT0iLAogICAgICAiZW1haWwiOiAiIgogICAgfQogIH0KfQ==
+type: kubernetes.io/dockerconfigjson
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: <PROJECT_NAME>
+  namespace: <PROJECT_NAMESPACE>
+  labels:
+    name: <PROJECT_NAME>
+data:
+  APP_ENV: "production"

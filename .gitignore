@@ -1,0 +1,14 @@
+/download
+/file
+/images
+/img
+/vendor
+/uploads
+/under
+/lhkpn-api
+/pedal
+/pedal-backend
+application/logs/*
+application/temp/*
+portal-assets/video/*
+/portal-assets/video/*

@@ -1,0 +1,188 @@
+/*
+ *  Remodal - v1.0.7
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+
+/* ==========================================================================
+   Remodal's necessary styles
+   ========================================================================== */
+
+/* Hide scroll bar */
+
+html.remodal-is-locked {
+  overflow: hidden;
+
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+/* Anti FOUC */
+
+.remodal,
+[data-remodal-id] {
+  display: none;
+}
+
+/* Necessary styles of the overlay */
+
+.remodal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+
+  display: none;
+}
+
+/* Necessary styles of the wrapper */
+
+.remodal-wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+  overflow: auto;
+
+  text-align: center;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.remodal-wrapper:after {
+  display: inline-block;
+
+  height: 100%;
+  margin-left: -0.05em;
+
+  content: "";
+}
+
+/* Fix iPad, iPhone glitches */
+
+.remodal-overlay,
+.remodal-wrapper {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Necessary styles of the modal dialog */
+
+.remodal {
+  position: relative;
+
+  outline: none;
+
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.remodal-is-initialized {
+  /* Disable Anti-FOUC */
+  display: inline-block;
+}
+
+.remodal .span-form{
+  display: block;
+  text-align: left;
+  padding-top: 15px;
+  width: 100%;
+}
+
+.remodal .span-form input,
+.remodal .span-form label{
+  display: inline;
+}
+
+.remodal .span-form:last-child{
+  text-align: center;
+}
+
+.remodal #input-pn,
+.remodal .input-txt,
+.remodal #input-email{
+  padding-left: 8px;
+  font-size: 16px;
+  padding: 5px 0px 5px 10px;
+  width: 100%;
+ 
+}
+
+.remodal  .r-radio{
+  padding-top: 10px;
+}
+
+.remodal  .r-radio label{
+  font-weight: normal;
+  padding-right: 10px; 
+}
+
+.remodal input::-webkit-input-placeholder { /* WebKit browsers */
+  line-height: 1.5em;
+}
+
+.remodal input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  line-height: 1.5em;
+}
+
+.remodal input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  line-height: 1.5em;
+}
+
+.remodal input:-ms-input-placeholder { /* Internet Explorer 10+ */
+  line-height: 1.5em;
+}
+
+/* custom */
+.remodal-image {
+  background: none;
+}
+
+@media only screen and (min-width: 991px) {
+  .remodal-image {
+    padding: 0 50px;
+  }
+}
+
+.remodal-image img {
+  border-radius: 20px;
+  margin: 10px 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Add the blur effect */
+  /* filter: blur(3px);
+  -webkit-filter: blur(3px); */
+}
+.overlay-image {
+  font-size: 2.5em;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 97%;
+  padding: 30px;
+  text-align: center;
+}
+
+/* @media only screen and (min-width: 641px) {
+  .overlay-image {
+    max-width: 700px;
+  }
+} */

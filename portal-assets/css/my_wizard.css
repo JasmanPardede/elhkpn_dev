@@ -1,0 +1,23 @@
+
+#sidebar.affix {
+    width: 15%;
+}
+
+
+.box-title{
+	text-transform: uppercase;
+}
+
+.action i{
+	cursor: pointer;
+}
+
+.action i:hover{
+	color: #4169E1;
+}
+
+
+.nav-pills>li>a{
+
+}
+
